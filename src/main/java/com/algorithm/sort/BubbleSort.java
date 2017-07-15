@@ -12,6 +12,7 @@ public class BubbleSort {
 	private BubbleSort() {
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void sort(Comparable[] arr) {
 		int n = arr.length;
 		boolean swapped = false;

@@ -56,7 +56,7 @@ public class SortTestHelper {
 	}
 	
 	
-	public static void swap(Object arr[], int elementOne, int elementTwo) {
+	public static void swap(Object[] arr, int elementOne, int elementTwo) {
 		Object temp = arr[elementOne];
 		arr[elementOne] = arr[elementTwo];
 		arr[elementTwo] = temp;

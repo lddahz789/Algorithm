@@ -19,16 +19,8 @@ public class ReverseLinkeList {
 		}
 		return p1;
 	}
-	
-	public static ListNode reverseRecursion(ListNode current){
-		if(current.next == null)
-			return current;
-		while (current.next != null)
-		
-		return null;//TODO
-	}
-	
-	
+
+
 	public static void main(String[] args) {
 		ListNode root = generateLinkedList(20);
 		ListNode newRoot = reverseLinkedList(root);
@@ -58,14 +50,3 @@ public class ReverseLinkeList {
 
 
 
-class ListNode{
-	int data;
-	ListNode next;
-	public ListNode(int data){
-		this.data= data;
-	}
-	public ListNode(int data,ListNode n){
-		this.data = data;
-		next = n;
-	}
-}

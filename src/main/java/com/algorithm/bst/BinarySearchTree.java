@@ -122,7 +122,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
 	// 前序遍历递归函数
 	public void preOrder(Node node) {
-		int max = 0;
+	
 		if (node != null) {
 			System.out.println(node.value);
 			preOrder(node.left);

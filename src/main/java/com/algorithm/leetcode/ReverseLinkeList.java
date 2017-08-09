@@ -1,9 +1,16 @@
 package com.algorithm.leetcode;
 
+import java.util.Stack;
+
 public class ReverseLinkeList {
 
 	
-	public static ListNode reverseLinkedList(ListNode root){
+	/**
+	 * 翻转链表
+	 * @param root
+	 * @return
+	 */
+	public  ListNode reverseLinkedList(ListNode root){
 		if (root == null) {
             return root;
         }
@@ -19,33 +26,43 @@ public class ReverseLinkeList {
 		}
 		return p1;
 	}
-
-
-	public static void main(String[] args) {
-		ListNode root = generateLinkedList(20);
-		ListNode newRoot = reverseLinkedList(root);
-		while(newRoot != null) {
-			System.out.println(newRoot.data);
-			newRoot = newRoot.next;
-		}
-	}
 	
-	
-	public static ListNode generateLinkedList(int num){
-		ListNode node = new ListNode(0, null);
-		ListNode cur = null;
-		ListNode temp = null;
-        for(int i = 1 ; i < num;i++){
-            temp = new ListNode(i, null);
-            if (i == 1) {
-                node.next = temp;
-            }else{
-                cur.next = temp;
-            }
-            cur = temp;
+	/**
+	 * 翻转链表 栈解法
+	 * @param head
+	 * @return
+	 */
+	public  ListNode reverseList(ListNode head) {
+        if (head == null)
+            return null;
+        Stack<ListNode> stack = new Stack<>();
+        while (head!=null){
+            stack.push(head);
+            head = head.next;
         }
-        return node;
-	}
+        ListNode newHead = stack.pop();
+        ListNode cur = newHead;
+        while (!stack.isEmpty()){
+           cur.next = stack.pop();
+            cur = cur.next;
+        }
+        cur.next = null;
+        return newHead;
+    }
+	
+	
+	/**
+	 * 翻转链表 m - n
+	 * @param head
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public ListNode reverseBetween(ListNode head, int m, int n) {
+        
+		return null;//TODO
+    }
+	
 }
 
 

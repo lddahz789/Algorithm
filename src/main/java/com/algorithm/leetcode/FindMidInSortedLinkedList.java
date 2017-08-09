@@ -1,6 +1,6 @@
 package com.algorithm.leetcode;
 
-public class ReverseLinkedList {
+public class FindMidInSortedLinkedList {
 
 	
 	public static ListNode getMiddle(ListNode head){
